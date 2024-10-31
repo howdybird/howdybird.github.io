@@ -1,0 +1,19 @@
+[
+
+{
+    "title":"test update" ,
+    "blurb":"a blog post about a subject." ,
+    "date":"10-31-2024" ,
+    "category":"blog" ,
+    "address":"blog/test-update"
+} ,
+
+{
+    "title":"the mangler 3d" ,
+    "blurb":"musical about dirty laundry." ,
+    "date":"10-11-2024" ,
+    "category":"theatre" ,
+    "address":"theatre/mangler"
+}
+
+]

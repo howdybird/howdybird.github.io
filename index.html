@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>1-2-2</title>
+</head>
+
+<body>
+
+    <div id="main-rect">
+        <div id="categories-column">
+            <a><h2>blog</h2></a>
+            <a><h2>funny pages</h2></a>
+            <a><h2>video</h2></a>
+            <a><h2>theatre</h2></a>
+            <a><h2>music</h2></a>
+            <a><h2>miscellaneous</h2></a>
+            <!-- tabletop games, video games -->
+        </div>
+        <div id="updates-column">
+            <h1>recent</h1>
+            <div id="updates-list"></div>
+        </div>
+    </div>
+
+
+    <script>
+        const updates_url = "updates-list.json"
+        const updates_json = await fetch(updates_url);
+        document.getElementById("categories-column").innerHTML = updates_json;
+    </script>
+
+</body>
+
+</html>
