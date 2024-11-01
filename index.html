@@ -28,8 +28,10 @@
 
 
     <script>
-        const updates_json = await fetch("http://howdybird.github.io/updates-list.json");
+        const updates_json = await fetch("https://1-2-2.xyz/updates-list.json");
+        document.getElementById("categories-column").innerHTML = "uh oh";
         document.getElementById("categories-column").innerHTML = updates_json;
+
     </script>
 
 </body>
