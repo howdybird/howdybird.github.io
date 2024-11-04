@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>1-2-2</title>
+
+    <link rel="stylesheet" href="main.css">
+
+    <script src="page-indexing.js"></script>
 </head>
 
 <body>
@@ -28,9 +32,12 @@
 
 
     <script>
-        const updates_json = await fetch("https://1-2-2.xyz/updates-list.json");
-        document.getElementById("categories-column").innerHTML = "uh oh";
-        document.getElementById("categories-column").innerHTML = updates_json;
+
+        getPageCatalog(pageIndexResolve)
+
+        function pageIndexResolve(data) {
+            document.getElementById("updates-list").innerHTML = pageCatalogToHtml(data);
+        }
 
     </script>
 
