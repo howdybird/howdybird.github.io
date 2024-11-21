@@ -1,0 +1,29 @@
+body {
+    color:rgb(228, 254, 255);
+}
+
+p {  
+    line-height: 130%;
+    margin: auto;
+    margin-bottom: 0.3ex;
+    text-indent: 1.7em;
+    width: 90%;
+}
+
+h4 {
+    text-align: center;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 3ex;
+    max-width: 50%;
+}
+
+#main-rect {
+    background-color:rgba(116, 11, 55, 0.98);
+    padding-bottom: 4em;
+}
+
+a {
+    color: rgb(255, 255, 129);
+
+}

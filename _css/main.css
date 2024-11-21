@@ -1,0 +1,29 @@
+body {
+    /* background-image: url("/_resource/catofjoy.png"); */
+    background-image: url("/_resource/redwingblackbird.jpg");
+    background-position-x: center;
+    background-size: 190px;
+    background-repeat: repeat;
+
+    font-size:110%;
+}
+
+a {
+    text-decoration: none;
+    /* color: rgb(0, 90, 96); */
+
+}
+
+#main-rect {
+    /* width: 40%; */
+    width: fit-content;
+    max-width: min(100ch, 80%);
+    min-width: min(56ch, 80%);
+    margin: auto;
+    padding-left: 1.5em;
+    padding-right: 1.5em;   
+    padding-top: .5em;
+    padding-bottom: 1.5em;
+    margin-top: min(5em, 10%);
+    margin-bottom: 10em;
+}

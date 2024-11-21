@@ -1,11 +1,23 @@
 [
 
 {
+    "title":"example item." ,
+    "blurb":"description" ,
+    "date":"YYYY-MM-DD" ,
+    "categories":["blog"] ,
+    "address":"/blog/test-update.html" ,
+    "hidelist":true ,
+    "noindex":true ,
+    "info": "hidelist: if set to true & hidelist enabled, item not indexed. noindex: if set to true, item never indexed." ,
+    "info2": "categories can be a string or array. all fields optional and default to blank/false except title & address."
+} ,
+
+{
     "title":"test update" ,
     "blurb":"a blog post about a subject." ,
     "date":"2024-10-31" ,
     "categories":["blog"] ,
-    "address":"blog/test-update.html"
+    "address":"/blog/test-update.html"
 } ,
 
 {
@@ -13,7 +25,7 @@
     "blurb":"musical about dirty laundry." ,
     "date":"2024-10-11" ,
     "categories":["theatre"] ,
-    "address":"theatre/mangler"
+    "address":"/theatre/mangler"
 } ,
 
 {
@@ -25,6 +37,37 @@
 
 {
     "title":"nodate" ,
+    "blurb":"what a wonderful world" ,
+    "categories":["theatre"] ,
+    "address":"blank"
+} ,
+
+{
+    "title":"test update" ,
+    "blurb":"a blog post about a subject." ,
+    "date":"2024-10-31" ,
+    "categories":["blog"] ,
+    "address":"/blog/test-update.html"
+} ,
+
+{
+    "title":"the mangler 3d" ,
+    "blurb":"musical about dirty laundry. i'm making this description extremely long to test how it ends up looking on the page." ,
+    "date":"2024-10-11" ,
+    "categories":["theatre"] ,
+    "address":"/theatre/mangler"
+} ,
+
+{
+    "title":"test" ,
+    "date":"2019-04-21" ,
+    "categories":["blog"] ,
+    "address":"blank"
+} ,
+
+{
+    "title":"nodate" ,
+    "blurb":"what a wonderful world" ,
     "categories":["theatre"] ,
     "address":"blank"
 } 
