@@ -9,10 +9,6 @@ a {
     0px 0px 2.5px rgba(0, 0, 0, 0.69), 0px 0px 1px rgba(0, 0, 0, 0.16);
 }
 
-a:hover {
-    color:rgb(231, 255, 220);
-}
-
 .link-date {
     line-height: 50%;
 }

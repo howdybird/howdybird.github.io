@@ -11,10 +11,31 @@
     <link rel="stylesheet" href="/_css/nav-page.css">
 
     <script src="/_script/page-indexing.js"></script>
+
+    <style>
+        #updates-column {
+            max-width: 36ch;
+        }
+    </style>
 </head>
 
 <body>
 
-test text
+    <div id="main-rect">
+        <div id="back-buttons"><u><h3><a href="/">⤊</a> <a href="..">⇑</a></h3></u></div>
+
+        <div id="updates-column">
+            <h2 style="font-weight:normal; margin-bottom: 2ex;">blog</h2>
+            <div id="updates-list"></div>
+        </div>
+    </div>
+
+    <script>
+        getPageCatalog(pageIndexResolve, "blog")
+
+        function pageIndexResolve(data) {
+            document.getElementById("updates-list").innerHTML = pageCatalogToHtml(data);
+        }
+    </script>
 
 </body>

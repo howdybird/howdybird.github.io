@@ -6,8 +6,12 @@ p {
     line-height: 130%;
     margin: auto;
     margin-bottom: 0.3ex;
-    text-indent: 1.7em;
-    width: 90%;
+}
+
+.indent-p {
+    p {
+        text-indent: 2.7em;
+    }
 }
 
 h4 {
@@ -18,12 +22,18 @@ h4 {
     max-width: 50%;
 }
 
+h5 {
+    font-size: 100%;
+    margin-bottom: 1.5ex;
+    margin-top: 2.5ex;
+}
+
 #main-rect {
     background-color:rgba(116, 11, 55, 0.98);
     padding-bottom: 4em;
 }
 
-a {
-    color: rgb(255, 255, 129);
-
+#main-content {
+    width: 90%;
+    margin: auto;
 }

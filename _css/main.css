@@ -4,14 +4,19 @@ body {
     background-position-x: center;
     background-size: 190px;
     background-repeat: repeat;
+    background-attachment: fixed;
 
     font-size:110%;
 }
 
 a {
     text-decoration: none;
-    /* color: rgb(0, 90, 96); */
+    color: rgb(255, 255, 129);
 
+}
+
+a:hover {
+    color:rgb(231, 255, 220);
 }
 
 #main-rect {
