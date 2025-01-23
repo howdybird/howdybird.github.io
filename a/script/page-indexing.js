@@ -29,7 +29,7 @@ function getPagesInCategories(subIncCategories, pageData, hidelistEnabled = fals
     if (subIncCategories.length == 0) includeAll = true;
 
     for (let i = 0; i < pageData.length; i++) {
-        if (pageData[i].hidelist && hidelistEnabled) {console.log("hidelisted"); continue;}
+        if (pageData[i].hidelist && hidelistEnabled) {continue;}
         if (pageData[i].noindex) {continue;}
         if (includeAll) {result.push(pageData[i]); continue;}
         for (let j = 0; j < subIncCategories.length; j++) {
@@ -43,18 +43,36 @@ function getPagesInCategories(subIncCategories, pageData, hidelistEnabled = fals
 function sortPagesByDate(pages) {
     let sortedPages = [pages[0]];
     
+    // for (let i = 1; i < pages.length; i++) {
+    //     if (!("date" in pages[i])) //place undated item at index 0
+    //         {sortedPages.unshift(pages[i]);}
+    //     else if ("date" in sortedPages[0] && pages[i].date.localeCompare(sortedPages[0].date) == -1) //if 
+    //         {sortedPages.unshift(pages[i]);}
+    //     else if (pages[i].date.localeCompare(sortedPages[sortedPages.length - 1].date) >= 0) 
+    //         {sortedPages.push(pages[i]);}
+    //     else {
+    //         let j = 1;
+    //         while (true) {
+    //             if (!("date" in sortedPages[j]) || pages[i].date.localeCompare(sortedPages[j].date) >= 0) j++;
+    //             else {
+    //                 sortedPages.splice(j, 0, pages[i]); break;
+    //             }
+    //         }
+    //     }
+    // }
+
     for (let i = 1; i < pages.length; i++) {
-        if (!("date" in pages[i])) sortedPages.splice(0, 0, pages[i]);
-        else if ("date" in sortedPages[0] && pages[i].date.localeCompare(sortedPages[0].date) == -1) 
-            sortedPages.unshift(pages[i]);
-        else if (pages[i].date.localeCompare(sortedPages[sortedPages.length - 1].date) >= 0) sortedPages.push(pages[i]);
-        else { 
-            let j = 1;
-            while (true) {
-                if (!("date" in sortedPages[j]) || pages[i].date.localeCompare(sortedPages[j].date) >= 0) j++;
-                else {
-                    sortedPages.splice(j, 0, pages[i]); break;
-                }
+        let j = 0;
+        while (true) {
+            if (j == sortedPages.length) {
+                sortedPages.splice(j, 0, pages[i]); break;
+            }
+            if (j < sortedPages.length && (
+                !("date" in sortedPages[j]) || ("date" in pages[i] && pages[i].date.localeCompare(sortedPages[j].date) >= 0))) {
+                j++;
+            }
+            else {
+                sortedPages.splice(j, 0, pages[i]); break;
             }
         }
     }

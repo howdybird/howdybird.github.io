@@ -1,5 +1,5 @@
 body {
-    color:rgb(228, 254, 255);
+    color:rgb(240, 255, 255);
 }
 
 p {  
@@ -29,7 +29,8 @@ h5 {
 }
 
 #main-rect {
-    background-color:rgba(116, 11, 55, 0.98);
+    /* background-color:rgba(116, 11, 55, 0.98); */
+    background-color: rgba(8, 21, 18, 0.854);
     padding-bottom: 4em;
 }
 
