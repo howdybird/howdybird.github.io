@@ -42,24 +42,6 @@ function getPagesInCategories(subIncCategories, pageData, hidelistEnabled = fals
 
 function sortPagesByDate(pages) {
     let sortedPages = [pages[0]];
-    
-    // for (let i = 1; i < pages.length; i++) {
-    //     if (!("date" in pages[i])) //place undated item at index 0
-    //         {sortedPages.unshift(pages[i]);}
-    //     else if ("date" in sortedPages[0] && pages[i].date.localeCompare(sortedPages[0].date) == -1) //if 
-    //         {sortedPages.unshift(pages[i]);}
-    //     else if (pages[i].date.localeCompare(sortedPages[sortedPages.length - 1].date) >= 0) 
-    //         {sortedPages.push(pages[i]);}
-    //     else {
-    //         let j = 1;
-    //         while (true) {
-    //             if (!("date" in sortedPages[j]) || pages[i].date.localeCompare(sortedPages[j].date) >= 0) j++;
-    //             else {
-    //                 sortedPages.splice(j, 0, pages[i]); break;
-    //             }
-    //         }
-    //     }
-    // }
 
     for (let i = 1; i < pages.length; i++) {
         let j = 0;
@@ -80,13 +62,30 @@ function sortPagesByDate(pages) {
     return sortedPages.reverse();
 }
 
-function pageCatalogToHtml(data = []) {
+function pageCatalogToHtml(data = [], printCategories = false) {
     let txt = "";
     
     for (i = 0; i < data.length; i++) {
         txt += `<h3><a href=\"${data[i].address}\">` + data[i].title + "</a></h3>";
-        if ("date" in data[i]) txt += '<div class="link-date">' + data[i].date + "</div>";
-        if ("blurb" in data[i]) txt += '<div class="link-blurb">' + data[i].blurb + "</div>";
+        let infolinetxt = "";
+        if ("categories" in data[i] && typeof data[i].categories == "string") {data[i].categories = [data[i].categories]}
+        if (printCategories && "categories" in data[i] && data[i].categories.length > 0) {
+            let link_cat_txt = "";
+            link_cat_txt += "<em>";
+            for (let j = 0; j < data[i].categories.length; j++) {
+                if (j > 0) {link_cat_txt += ", ";}
+                link_cat_txt += data[i].categories[j]
+            }
+            link_cat_txt += "</em>";
+            infolinetxt += '<div class="link-infoline">' + link_cat_txt;
+        }
+        if ("date" in data[i] && !("hidedate" in data[i] && data[i].hidedate == true)) {
+            if (infolinetxt == "") {infolinetxt += '<div class="link-infoline">'}
+            else {infolinetxt += ' <span style="font-size:70%;">&bull;</span> '}
+            infolinetxt += data[i].date;
+        }
+        if (infolinetxt != "") {infolinetxt += '</div>'; txt += infolinetxt;}
+        if ("blurb" in data[i]) {txt += '<div class="link-blurb">' + data[i].blurb + "</div>";}
         else {txt += "<br>";}
     }   
 

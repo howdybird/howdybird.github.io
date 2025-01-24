@@ -7,6 +7,8 @@
 
     <title>1-2-2</title>
 
+    <link rel="icon" type="image/x-icon" href="/a/resource/rainbowstripe.jpg">
+
     <link rel="stylesheet" href="/a/css/main.css">
     <link rel="stylesheet" href="/a/css/nav-page.css">
 
@@ -69,7 +71,7 @@
         getPageCatalog(pageIndexResolve, "all", 10, true)
 
         function pageIndexResolve(data) {
-            document.getElementById("updates-list").innerHTML = pageCatalogToHtml(data);
+            document.getElementById("updates-list").innerHTML = pageCatalogToHtml(data, printCategories=true);
         }
 
     </script>

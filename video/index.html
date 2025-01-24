@@ -28,14 +28,14 @@
 
 
         <div id="updates-column">
-            <h2 style="font-weight:normal; margin-bottom: 2ex;">blog</h2>
+            <h2 style="font-weight:normal; margin-bottom: 2ex;">video</h2>
             <div id="updates-list"></div>
         </div>
     </div>
 
     <!-- <script src="/a/script/back-buttons.js"></script> -->
     <script> 
-        getPageCatalog(pageIndexResolve, "blog")
+        getPageCatalog(pageIndexResolve, "video")
 
         function pageIndexResolve(data) {
             document.getElementById("updates-list").innerHTML = pageCatalogToHtml(data);

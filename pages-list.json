@@ -6,10 +6,12 @@
     "date":"YYYY-MM-DD" ,
     "categories":["blog"] ,
     "address":"/blog/test-update.html" ,
+    "hidedate":true ,
     "hidelist":true ,
     "noindex":true ,
     "info": "hidelist: if set to true & hidelist enabled, item not indexed. noindex: if set to true, item never indexed." ,
-    "info2": "categories can be a string or array. all fields optional and default to blank/false except title & address."
+    "info2": "categories can be a string or array. all fields optional and default to blank/false except title & address." ,
+    "info3": "hidedate - will be placed in order of date, but date will not be shown."
 } ,
 
 {
@@ -22,54 +24,94 @@
 } ,
 
 {
+    "title":"juice" ,
+    "blurb":"[ext] class project." ,
+    "date":"2021" ,
+    "categories":"video" ,
+    "address":"https://www.youtube.com/watch?v=RnRgyFzqA4U" ,
+    "hidelist":true
+} ,
+
+{
+    "title":"Commercials" ,
+    "blurb":"assorted commercial spots." ,
+    "date":"2022" ,
+    "categories":"video" ,
+    "address":"/video/commercials.html" ,
+    "hidelist":true
+} ,
+
+{
+    "title":"skin" ,
+    "blurb":"short story. burial." ,
+    "date":"2023-08-16" ,
+    "categories":"writing" ,
+    "address":"/writing/skin.html"
+} ,
+
+{
     "title":"the 16 Days of Eodemus" ,
     "blurb":"a modest proposal for calendar reform." ,
+    "date":"2025" ,
     "categories":"blog" ,
-    "date":"2011-09-21" ,
     "address":"/blog/eod.html"
 } ,
 
 {
     "title":"Eodemic date calculator" ,
-    "blurb":"bi-directional Eodemic/Gregorian date conversion" ,
+    "blurb":"bi-directional Eodemic/Gregorian date conversion." ,
+    "date":"2025" ,
     "categories":"etc" ,
-    "address":"/etc/eod-calculator.html"
+    "address":"/etc/eod-calculator.html" ,
+    "hidelist":true
 } ,
 
 {
-    "title":"bloggie, various" ,
-    "blurb":"stories from around. oh and while we're here let's write a long ass blurb to have on this page yayyyy here we goooo" ,
-    "categories":"blog" ,
-    "address":"/writing/news.html"
-} ,
-
-{
-    "title":"test" ,
-    "blurb":"stories from around." ,
-    "categories":"writing" ,
-    "address":"/writing/news.html"
-} ,
-
-{
-    "title":"the mangler 3d" ,
+    "title":"The Mangler 3D" ,
     "blurb":"musical about dirty laundry." ,
-    "date":"2024-10-11" ,
+    "date":"2024-10" ,
     "categories":["theatre"] ,
     "address":"/theatre/mangler.html"
 } ,
 
 {
-    "title":"news, various" ,
+    "title":"Cats" ,
+    "blurb":"musical about cats." ,
+    "date":"2024-03" ,
+    "categories":["theatre"] ,
+    "address":"/theatre/mangler.html"
+} ,
+
+{
+    "title":"news" ,
     "blurb":"stories from around." ,
     "categories":"writing" ,
+    "date":"2021" ,
     "address":"/writing/news.html"
 } ,
 
 {
-    "title":"test" ,
-    "blurb":"stories from around." ,
-    "categories":"writing" ,
-    "address":"/writing/news.html"
+    "title":"Teeth" ,
+    "blurb":"card game for 2 players." ,
+    "date":"2025-01-24" ,
+    "categories":"etc" ,
+    "address":"/etc/teeth.html"
+} ,
+
+{
+    "title":"Goblin Gains" ,
+    "blurb":"[ext] game about punching goblins. made in Godot in 5 hrs." ,
+    "date":"2024-08-26" ,
+    "categories":"etc" ,
+    "address":"https://flggs.itch.io/goblin-gains"
+} ,
+
+{
+    "title":"Saw" ,
+    "blurb":"& what I would do better." ,
+    "date":"2025" ,
+    "categories":"blog" ,
+    "address":"/blog/saw.html"
 }
 
 ]
