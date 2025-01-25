@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>1-2-2</title>
+    <title>1-2-2 &bull; blog</title>
 
     <link rel="icon" type="image/x-icon" href="/a/resource/rainbowstripe.jpg">
 
@@ -28,14 +28,14 @@
 
 
         <div id="updates-column">
-            <h2 style="font-weight:normal; margin-bottom: 2ex;">blog</h2>
+            <h2 style="font-weight:normal; margin-bottom: 3ex; margin-top: 2.5ex;">blog</h2>
             <div id="updates-list"></div>
         </div>
     </div>
 
     <!-- <script src="/a/script/back-buttons.js"></script> -->
     <script> 
-        getPageCatalog(pageIndexResolve, "blog")
+        getPageCatalog(pageIndexResolve, "/pages-list.json", "blog")
 
         function pageIndexResolve(data) {
             document.getElementById("updates-list").innerHTML = pageCatalogToHtml(data);

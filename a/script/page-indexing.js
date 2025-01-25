@@ -1,4 +1,4 @@
-function getPageCatalog(cFunction, incCategories = [], noEntries = 0, hidelistEnabled = false) {
+function getPageCatalog(cFunction, catalogPath, incCategories = [], noEntries = 0, hidelistEnabled = false) {
     /* cFunction: func called on load ; noEntries: # of entries to return (0 for all) ;
     incCategories: category or array of categories to include, set to "all" or empty array for all */
 
@@ -8,7 +8,7 @@ function getPageCatalog(cFunction, incCategories = [], noEntries = 0, hidelistEn
     var sortedPagesList = [];
 
     const xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/pages-list.json");
+    xhttp.open("GET", catalogPath);
 
     xhttp.onload = () => {
         let unsortedPagesList = getPagesInCategories(incCategories, JSON.parse(xhttp.response), hidelistEnabled);

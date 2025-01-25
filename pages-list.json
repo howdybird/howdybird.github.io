@@ -84,10 +84,18 @@
 
 {
     "title":"news" ,
-    "blurb":"stories from around." ,
+    "blurb":"articles, various. tips and tricks." ,
     "categories":"writing" ,
     "date":"2021" ,
     "address":"/writing/news.html"
+} ,
+
+{
+    "title":"Celebrity Dream Journal" ,
+    "blurb":"dreams of hollywood." ,
+    "categories":"writing" ,
+    "date":"2023-10-28" ,
+    "address":"/writing/celebritydreams.html"
 } ,
 
 {

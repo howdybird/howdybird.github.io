@@ -68,7 +68,7 @@
 
     <script>
 
-        getPageCatalog(pageIndexResolve, "all", 10, true)
+        getPageCatalog(pageIndexResolve, "/pages-list.json", "all", 10, true)
 
         function pageIndexResolve(data) {
             document.getElementById("updates-list").innerHTML = pageCatalogToHtml(data, printCategories=true);
