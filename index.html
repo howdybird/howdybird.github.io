@@ -16,8 +16,23 @@
     <script src="/a/script/tag-indexing.js"></script>
 
     <style>
-        body {
+        /* body {
             background-image: url("/a/resource/bg-image/highways/15.jpg");
+        } */
+
+        #background-image {
+            z-index: -1;
+            position: fixed;
+            /* size: max(100vw, 160vh); */
+            width: 100vw;
+            height: 100vh;
+            margin-left: -8px;
+            margin-top: -107px;
+            background-image: url("/a/resource/bg-image/highways/15.jpg");
+            background-position-x: center;
+            background-position-y: bottom;
+            background-size: max(100vw, 160vh);
+            background-attachment: fixed;
         }
 
         #homepage-main-rect {
@@ -39,7 +54,7 @@
             float: right;
             min-width: 10em;
             max-width: 30%;
-            margin-top: 12vh;
+            margin-top: 10vh;
             margin-bottom: 12ex;
             text-align: right;
             line-height: 131%;
@@ -61,6 +76,8 @@
 
 
 <body>
+
+    <div id="background-image"></div>
 
     <div id="homepage-main-rect">
         
