@@ -7,73 +7,88 @@
 
     <title>1-2-2</title>
 
-    <link rel="icon" type="image/x-icon" href="/a/resource/rainbowstripe.jpg">
+    <link rel="icon" type="image/x-icon" href="/a/resource/bg-image/highways/42.jpg">
 
     <link rel="stylesheet" href="/a/css/main.css">
     <link rel="stylesheet" href="/a/css/nav-page.css">
 
-    <script src="/a/script/page-indexing.js"></script>
+    <script src="/a/script/data-fetch.js"></script>
+    <script src="/a/script/tag-indexing.js"></script>
 
     <style>
-        #categories-column {
-            /* width: 40%; */
-            text-align: left;
+        body {
+            background-image: url("/a/resource/bg-image/highways/15.jpg");
+        }
+
+        #homepage-main-rect {
+            margin-left: max(13%, 2em);
+            min-width: 18em;
+            width: 74%;
+
+            margin-top: 15ex;
+        }
+
+        #left-col {
             float: left;
-            position: fixed;
+            min-width: 18em;
+            width: 50%;
+            margin-right: 6em;
         }
 
-        #updates-column {
-            /* width:40%; */    
+        #right-col {
+            float: right;
+            min-width: 10em;
+            max-width: 30%;
+            margin-top: 12vh;
+            margin-bottom: 12ex;
             text-align: right;
-            margin-left: auto;
-            padding-left: 8em;
-            max-width: 32ch;
+            line-height: 131%;
         }
 
-        #main-rect {
-            min-width: 35%;
-            width: max(35%, 36ch);
+        #bottom-margin {
+            height: 35vh;
+            width: 100vw;
+            display:inline-block;
         }
 
         h2 {
-            line-height: 120%;
+            color: rgb(16, 47, 105);
+            font-size: 120%;
         }
 
-        h3 {
-            /* line-height: 0; */
-            margin-bottom: 1ex;
-        }
     </style>
 </head>
 
+
 <body>
 
-    <div id="main-rect">
-        <div id="categories-column">
-            <h2><a href="/blog">blog</a></h2>
-            <h2><a href="/writing">writing</a></h2>
-            <h2><a href="/video">video</a></h2>
-            <h2><a href="/theatre">theatre</a></h2>
-            <h2><a href="/etc">etc</a></h2>
-            <h2><a href="/about.html">about</a></h2>
+    <div id="homepage-main-rect">
+        
+        <noscript><h2><span class="text-bg" style="color: black">Javascript is required for this page to be displayed properly. If you can't enable Javascript, you can view the full page catalog <a href="/p/" class="taglink" style="color: rgb(14, 62, 146)"><u>here</u>.</a></span></h2></noscript>
 
-            <!-- tabletop games, video games -->
+
+        <div id="right-col">
+            <div id="main-cat"></div>
+            <br>
+            <div id="feat-links"></div>
         </div>
-        <div id="updates-column">
-            <!-- <h2 style="font-weight:normal;"><u>recent</u></h2> -->
-            <div id="updates-list"></div>
+
+        <div id="left-col">
+            <div class="category-header"><span class="text-bg">recent</span></div>
+            <div id="recent-index"></div>
         </div>
+
+        
+
     </div>
+
+    <div id="bottom-margin"></div>
 
 
     <script>
-
-        getPageCatalog(pageIndexResolve, "/pages-list.json", "all", 10, true)
-
-        function pageIndexResolve(data) {
-            document.getElementById("updates-list").innerHTML = pageCatalogToHtml(data, printCategories=true);
-        }
-
+        populatePageIndex("recent-index", "/a/index/pages-mainlist.json", tag="", flags=["hide-home"]);
+        populateNavColWithList("main-cat", "main-categories");
+        populateNavColWithList("feat-links", "featured");
     </script>
 
 </body>

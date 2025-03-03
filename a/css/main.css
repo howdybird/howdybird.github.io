@@ -1,35 +1,42 @@
 body {
-    /* background-image: url("/a/resource/catofjoy.png"); */
-    background-color: black;
-    background-image: url("/a/resource/redwingblackbird.jpg");
+    background-color: rgb(236, 239, 239);
+    background-repeat: no-repeat;
     background-position-x: center;
-    background-size: 190px;
-    background-repeat: repeat;
+    background-position-y: bottom;
+    background-size: max(100vw, 160vh);
     background-attachment: fixed;
+}
 
-    font-size:110%;
-    font-family: Times, serif;
+.text-bg {
+    background-color: rgb(255, 255, 255);
+}
+
+.taglink {
+    font-style: italic;
+    background-color: rgb(255, 255, 255);
 }
 
 a {
-    text-decoration: none;
-    color: rgb(255, 255, 129);
+    text-decoration: unset;
+    color: unset;
+
+    &.text-bg:hover {
+        box-shadow: 1px 2px 0 rgba(8, 8, 9, 0.238);
+    }
+    &.taglink:hover {
+        background-color: rgb(228, 241, 154);
+    }
 }
 
-a:hover {
-    color:rgb(231, 255, 220);
-}
+#home-button {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 120%;
+    line-height: 95%;
+    color: black;
+    background-color: white;
 
-#main-rect {
-    /* width: 40%; */
-    width: fit-content;
-    max-width: min(100ch, 80%);
-    min-width: min(56ch, 80%);
-    margin: auto;
-    padding-left: 1.5em;
-    padding-right: 1.5em;   
-    padding-top: .5em;
-    padding-bottom: 1.5em;
-    margin-top: min(5em, 10%);
-    margin-bottom: 10em;
+    &:hover {
+        background-color: rgb(228, 241, 154);
+    }
 }

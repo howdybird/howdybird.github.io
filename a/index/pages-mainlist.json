@@ -1,0 +1,144 @@
+{
+
+"about":
+{
+    "title":"about/contact" ,
+    "address":"/p/about.html" ,
+    "tags":["!no-index"]
+} ,
+
+"image-garden":
+{
+    "title":"image garden" ,
+    "address":"/p/image-garden.html" ,
+    "tags":["!hide-home", "etc"]
+} ,
+
+"file-org":
+{
+    "title":"honest filing" ,
+    "blurb":"a dream about organization" ,
+    "date":"2025-02-26" ,
+    "address":"/p/file-org.html" ,
+    "tags":["blog"]
+} ,
+
+"gameofthrones":
+{
+    "title":"i love game of thrones" ,
+    "blurb":"autopsy" ,
+    "date":"2025-02-04" ,
+    "address":"/p/gameofthrones.html" ,
+    "tags":["blog", "media"]
+} ,
+
+"eodemus":
+{
+    "title":"16 Days of Eodemus" ,
+    "blurb":"a modest proposal for calendar reform" ,
+    "date":"2025" ,
+    "address":"/p/eodemus.html" ,
+    "tags":["blog"]
+} ,
+
+"eod-calc":
+{
+    "title":"Eodemic date calculator" ,
+    "blurb":"bidirectional Eodemic/Gregorian date converter" ,
+    "date":"" ,
+    "address":"/p/eod-calc.html" ,
+    "tags":["etc", "!hide-home"]
+} ,
+
+"skin":
+{
+    "title":"skin" ,
+    "blurb":"short story. burial" ,
+    "date":"2023-08-16" ,
+    "address":"/p/skin.html" ,
+    "tags":["writing"]
+} ,
+
+"mangler":
+{
+    "title":"The Mangler 3D" ,
+    "blurb":"musical about dirty laundry" ,
+    "date":"2024-10" ,
+    "address":"/p/mangler.html" ,
+    "tags":["av", "theatre", "resume"]
+} ,
+
+"cats":
+{
+    "title":"Cats" ,
+    "blurb":"musical about cats" ,
+    "date":"2024-03" ,
+    "address":"/p/cats.html" ,
+    "tags":["av", "theatre", "resume"]
+} ,
+
+"celeb-dreams":
+{
+    "title":"Celebrity Dream Journal" ,
+    "blurb":"dreams of hollywood" ,
+    "date":"2023-10-28" ,
+    "address":"/p/celeb-dreams.html" ,
+    "tags":["writing"]
+} ,
+
+"teeth":
+{
+    "title":"Teeth" ,
+    "blurb":"card game for two players" ,
+    "date":"" ,
+    "address":"/p/teeth.html" ,
+    "tags":["etc", "games"]
+} ,
+
+"scrummy":
+{
+    "title":"Scrummy" ,
+    "blurb":"card game for two or more players" ,
+    "date":"" ,
+    "address":"/p/scrummy.html" ,
+    "tags":["etc", "games"]
+} ,
+
+"goblin-gains":
+{
+    "title":"Goblin Gains" ,
+    "blurb":"game about punching goblins. made in Godot in 5 hrs." ,
+    "date":"2024-08-26" ,
+    "address":"https://flggs.itch.io/goblin-gains" ,
+    "tags":["etc", "games"]
+} ,
+
+"commercials":
+{
+    "title":"Commercials" ,
+    "blurb":"various 2022 commercial spots" ,
+    "date":"2022" ,
+    "address":"/p/commercials.html" ,
+    "tags":["av", "video"]
+} ,
+
+"news":
+{
+    "title":"news" ,
+    "blurb":"a group of news" ,
+    "date":"2021" ,
+    "address":"/p/news.html" ,
+    "tags":["writing"]
+} ,
+
+"juice":
+{
+    "title":"juice" ,
+    "blurb":"class project. fruit film" ,
+    "date":"2021" ,
+    "tags":["av", "video", "!hide-home"] ,
+    "address":"https://www.youtube.com/watch?v=RnRgyFzqA4U"
+}
+
+
+}

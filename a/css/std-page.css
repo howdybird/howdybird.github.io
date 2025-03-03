@@ -1,0 +1,43 @@
+body {
+    font-size: large;
+    line-height: 135%;
+    color: black;
+}   
+
+#main-rect {
+    margin: auto;
+    min-width: 16em;
+    max-width: 52em;
+    width: 96%;
+    margin-top: 13ex;
+    margin-bottom: 40vh;
+}
+
+.body-rect {
+    background-color: rgba(255, 255, 255, 0.92);
+    
+    margin-bottom: 8.5ex;
+
+    padding-top: 6ex;
+    padding-left: min(4em, 7%);
+    padding-right: min(4em, 7%);
+    padding-bottom: 9.5ex;
+}
+
+#home-button {
+    float: right;
+    margin-top: -1ex;
+    margin-right: calc(86vw);
+}
+
+a {
+    text-decoration: rgba(90, 78, 153, 0.418) underline;
+    color: rgb(4, 42, 83);
+}
+
+a:hover {
+    /* text-decoration: rgba(57, 57, 146, 0.659) underline; */
+    text-decoration: rgba(91, 78, 153, 0.169) underline;
+    background-color: rgb(236, 247, 183);
+    color: rgb(4, 30, 58);
+}

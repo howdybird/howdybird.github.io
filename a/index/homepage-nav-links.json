@@ -1,0 +1,13 @@
+{
+
+"main-categories":
+[
+    "#blog", "#av", "#writing", "#etc"
+],
+
+"featured":
+[
+    "#resume", "image-garden", "about"
+]
+
+}
