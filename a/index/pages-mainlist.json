@@ -3,7 +3,7 @@
 "about":
 {
     "title":"about/contact" ,
-    "address":"/p/about.html" ,
+    "address":"/about.html" ,
     "tags":["!no-index"]
 } ,
 
@@ -11,7 +11,7 @@
 {
     "title":"image garden" ,
     "address":"/p/image-garden.html" ,
-    "tags":["!hide-home", "etc"]
+    "tags":["!hide-home"]
 } ,
 
 "file-org":
@@ -38,7 +38,7 @@
     "blurb":"a modest proposal for calendar reform" ,
     "date":"2025" ,
     "address":"/p/eodemus.html" ,
-    "tags":["blog"]
+    "tags":["blog", "etc"]
 } ,
 
 "eod-calc":
@@ -52,7 +52,7 @@
 
 "skin":
 {
-    "title":"skin" ,
+    "title":"\"skin\"" ,
     "blurb":"short story. burial" ,
     "date":"2023-08-16" ,
     "address":"/p/skin.html" ,
@@ -88,7 +88,7 @@
 
 "teeth":
 {
-    "title":"Teeth" ,
+    "title":"\"teeth\"" ,
     "blurb":"card game for two players" ,
     "date":"" ,
     "address":"/p/teeth.html" ,
@@ -97,7 +97,7 @@
 
 "scrummy":
 {
-    "title":"Scrummy" ,
+    "title":"\"scrummy\"" ,
     "blurb":"card game for two or more players" ,
     "date":"" ,
     "address":"/p/scrummy.html" ,

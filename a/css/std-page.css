@@ -18,7 +18,7 @@ body {
     
     margin-bottom: 8.5ex;
 
-    padding-top: 6ex;
+    padding-top: 6.2ex;
     padding-left: min(4em, 7%);
     padding-right: min(4em, 7%);
     padding-bottom: 9.5ex;
@@ -28,6 +28,7 @@ body {
     float: right;
     margin-top: -1ex;
     margin-right: calc(86vw);
+    color: black;
 }
 
 a {
@@ -40,4 +41,18 @@ a:hover {
     text-decoration: rgba(91, 78, 153, 0.169) underline;
     background-color: rgb(236, 247, 183);
     color: rgb(4, 30, 58);
+}
+
+h2 {
+    font-size: larger;
+    text-align: center;
+}
+
+h3 {
+    font-size: large;
+    text-align: center;
+    font-weight: normal;
+    font-style: italic;
+    margin-top: -1.5ex;
+    margin-bottom: 4ex;
 }

@@ -52,6 +52,10 @@
             font-size: 120%;
         }
 
+        #pages-index {
+            margin-top: 3.8ex;
+        }
+
     </style>
 
     <noscript><style>
@@ -71,21 +75,20 @@
         <a href="/" id="home-button" style="color:black;">&#8634;</a>
 
         <div id="left-col">
-            <h2><span id="tag-title" class="text-bg" style="font-size: 120%; color:rgb(0, 0, 0);">blog</span></h2>
-            <h2><a href="" class="text-bg">item number one</a></h2>
-            <h2><a class="text-bg">another item over here and here we go</span></h2>
-            <h2><a class="text-bg">and boy oh boy number 3</span></h2>
-            <h2><a class="text-bg">the fourth item here it is boyo</span></h2>
+            <h2><span id="tag-title" class="text-bg category-header">blog</span></h2>
+            <div id="pages-index"></div>
         </div>
     
-        <div id="right-col">
-            <h2><a class="taglink">short stories</span></h2>
-            <h2><a class="taglink">ice world</span></h2>
-            <h2><a class="taglink">fiction</span></h2>
-            <h2><a class="taglink">talking about computers</span></h2>
-        </div>
+        <!-- <div id="right-col">
+            <h2><a class="taglink">example</span></h2>
+        </div> -->
 
     </div>
+
+    <script>
+        document.getElementById("tag-title").innerHTML = query;
+        populatePageIndex("pages-index", "/a/index/pages-mainlist.json", tag=query);
+    </script>
 
 </body>
 

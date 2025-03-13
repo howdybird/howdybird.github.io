@@ -5,7 +5,8 @@ function populateNavColWithList(divId, category){
     const xreq_navLinkList = xFileReq("/a/index/homepage-nav-links.json");
 
     xreq_pageIndex.onload = () => {
-        xreq_navLinkList.onload = () => {
+        //basically once the 1st file loads check if the second has already loaded; if so proceed, if not wait for onload
+        const ifLinkListLoadedExecute = () => {
             const parsedList_pageIndex = JSON.parse(xreq_pageIndex.response); 
             const parsedList_navLinks = JSON.parse(xreq_navLinkList.response);
 
@@ -29,6 +30,13 @@ function populateNavColWithList(divId, category){
             }
 
             document.getElementById(divId).innerHTML = html;
+        }
+
+        if (xreq_navLinkList.readyState == XMLHttpRequest.DONE) {
+            ifLinkListLoadedExecute();
+        }
+        else {
+            xreq_navLinkList.onload = ifLinkListLoadedExecute;
         }
     }
 }
@@ -63,7 +71,7 @@ function populatePageIndex(divId, sourceFilePath, tag="", flags=[]) {
                 html += `<span class="page-list-entry-info page-list-hover-group">`
                 if ("date" in item) {html += `<span class="page-list-entry-info-date">` + item.date + `</span>`}
                 if (itemContentTags != []) {
-                    if ("date" in item) {html += `<span style="font-size:70%;">&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>`;}
+                    if ("date" in item && item.date != "") {html += `<span style="font-size:70%;">&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>`;}
                     for (var i = 0; i < itemContentTags.length; i+=1) {
                         if (i != 0) {html += ", ";}
                         html += `<a href="/tag/?` + itemContentTags[i] + `" class="taglink">` + itemContentTags[i] + `</a>`;
